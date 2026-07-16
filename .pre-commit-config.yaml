@@ -1,0 +1,17 @@
+# Run `pre-commit install` once to enable these hooks on every commit.
+# `pre-commit run --all-files` runs them manually across the repo.
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.20
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
+  # The hook shells out to `uv check`, so it resolves the project's own dev
+  # dependencies (pytest's types, ...) from pyproject.toml — nothing to duplicate
+  # in additional_dependencies. It always checks the whole project (a change in
+  # one file can break types in another), per the [tool.ty.src] config.
+  - repo: https://github.com/astral-sh/ty-pre-commit
+    rev: v0.0.59
+    hooks:
+      - id: ty

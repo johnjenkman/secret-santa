@@ -1,0 +1,32 @@
+[project]
+name = "secret-santa"
+version = "1.0.0"
+description = "A CLI tool that draws Secret Santa assignments and generates per-person messages."
+requires-python = ">=3.14"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.15.20",
+    "ty>=0.0.59",
+    "pre-commit>=4.6.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+# NOTE: do NOT enable ISC (implicit-str-concat) — html_message() intentionally uses
+# many adjacent t"..." fragments across lines; ISC would flag every one.
+
+[tool.ty.environment]
+python-version = "3.14"
+
+[tool.ty.src]
+include = ["secret_santa.py", "tests"]

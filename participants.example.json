@@ -1,0 +1,8 @@
+[
+  { "name": "Santa",       "email": "santa@northpole.example",    "excludes": ["Mrs. Claus"] },
+  { "name": "Mrs. Claus",  "email": "mrs.claus@northpole.example","excludes": ["Santa"] },
+  { "name": "Rudolph",     "email": "rudolph@northpole.example" },
+  { "name": "Frosty",      "email": "frosty@snowman.example" },
+  { "name": "Buddy",       "email": "buddy@elfculture.example",   "excludes": ["Jovie"] },
+  { "name": "Jovie",       "email": "jovie@elfculture.example",   "excludes": ["Buddy"] }
+]
