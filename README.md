@@ -6,6 +6,10 @@ This script generates Secret Santa gift assignments from a simple JSON list of y
 
 Requires Python 3.14+ (Santa's elves only use the latest tech). 🐍🧝‍♂️ [uv](https://docs.astral.sh/uv/) automatically fetches it for you if you don't have it.
 
+<p align="center">
+  <img src="gift-reveal.png" alt="HTML gift reveal card.">
+</p>
+
 
 ## 🛷 Usage
 
